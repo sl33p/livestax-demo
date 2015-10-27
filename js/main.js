@@ -14,7 +14,7 @@ $(".icons").html(el.join(""));
 // Filter the icon list. There's a _feature_ where you have to press space to refresh the whole list that would be nice to fix
 
 $(".form-control").on("keyup click input", function () {
-if (this.value.length > 0) {
+if (this.value.length >= 0) {
   $(".icons li").hide().filter(function () {
     return $(this).text().toLowerCase().indexOf($(".form-control").val().toLowerCase()) != -1;
   }).show();
